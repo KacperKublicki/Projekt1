@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<meta name="description" content="jakiś tekst" />
+	<meta name="keywords" content="jakiś tekst" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	
+	<link rel="stylesheet" style="text/css" href="style.css" />
+
+	
+	
+</head>
+
+<body>
+
+	<script>
+		document.write(0.15 * 3); document.write("<br />"); //wynik to 0.44999...
+		document.write(0.1 + 0.2+"<br />"); //wynik to 0.3000000009
+		document.write(Math.round((0.1 + 0.2)*10) / 10) ; document.write("<br />"); // 1 miejsce po przecinku
+		document.write(Math.round((0.15 * 3)*100) / 100) ; document.write("<br />"); //2 miejsca po przecinku
+		
+		var x;
+		x= 0.1 + 0.2;
+		x= x.toFixed(2); document.write(x);
+		
+		
+		
+		Number.prototype.round = function (miejsc)
+		{
+			return + (Math.round(this+"e+"+miejsc) + "e-" + miejsc);
+		}
+		
+		x= 0.1 + 0.2;
+		x= x.round(2); 
+		document.write(x);
+		
+	</script>
+
+</body>
+</html>
